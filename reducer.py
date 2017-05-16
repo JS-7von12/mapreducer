@@ -45,7 +45,8 @@ for line in sys.stdin:
         # to the standart output (stdout)
         # Key and value are seperated by a tab (\t)
         # Line ends with new line (\n)
-        sys.stdout.write("{0}\t{1}\n".format(previous_key, acc_count))
+        if acc_count > 114 :
+            sys.stdout.write("{0}\t{1}\n".format(previous_key, acc_count))
         # Sum of sales starts again with 0
         acc_count = 0
 
@@ -54,8 +55,9 @@ for line in sys.stdin:
     # the float function transforms the value
     # to a float data type (like decimal)
     acc_count += 1
-    # the previous key for the next iteration is the current key of the this iteration 
+    # the previous key for the next iteration is the current key of the this iteration
     previous_key = key
 
 # write the last result to stdout
-sys.stdout.write("{0}\t{1}\n".format(previous_key, acc_count))
+if acc_count > 114 :
+    sys.stdout.write("{0}\t{1}\n".format(previous_key, acc_count))
