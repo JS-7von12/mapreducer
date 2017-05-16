@@ -39,8 +39,8 @@ for line in sys.stdin:
 
 
 
-if len(data) != 6 :
-	raise ValueError("Error: There need to be exactly six elements in the tuple")
+    if len(data) != 6 :
+	       raise ValueError("Error: There need to be exactly six elements in the tuple")
 
 
     # Write the key-value combination to standard output (stdout)
